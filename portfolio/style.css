@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: rgb(31, 31, 31);
+}
+
+#holder {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.scroll-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
+}
+
+.scroll-item:nth-child(1) {
+    background: url(images/thenewspakistan-pk.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item:nth-child(2) {
+    background: url(images/holyroodterminal-com.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item:nth-child(3) {
+    background: url(images/gmcommerce-net.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item:nth-child(4) {
+    background: url(images/globalsocialworkers-com.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item:nth-child(5) {
+    background: url(images/amznupc-com.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item:nth-child(6) {
+    background: url(images/benandcamclothing-com.webp);
+    background-size: cover;
+    background-position: top;
+    transition: all 2s ease;
+}
+
+.scroll-item img {
+    width: 100%;
+    display: block;
+}
+
+.scroll-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.icons {
+    position: absolute;
+    bottom: -100%;
+    background-color: rgba(252, 66, 66, 0.85);
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.3s ease;
+}
+
+.icons button {
+    margin: 0 .5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icons button a {
+    text-decoration: none;
+    color: white;
+}
+
+.scroll-item:hover .icons {
+    bottom: 0;
+}
+
+.scroll-item:hover {
+    background-position: bottom;
+}
+
+@media screen and (max-width: 992px) {
+    .scroll-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .scroll-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
